@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/back_6sdp_stroke"
+                android:backgroundTint="@color/grey_20"
+                android:src="@drawable/menu__1_"
+                app:tint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="@color/grey_20"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/search"
+                    app:tint="@color/black" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/circle_back"
+                    android:backgroundTint="@color/grey_20"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/girl1" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <com.domonz.PrashantAdvait.utils.CustomNestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:fontFamily="@font/bevietnam_bold"
+                    android:text="Explore the world"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="1"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    tools:listitem="@layout/item_image" />
+
+                <LinearLayout
+                    android:id="@+id/layoutError"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/_300sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/errorIcon"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:src="@drawable/error"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/errorText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/bevietnam_medium"
+                        android:gravity="center"
+                        android:text="Error"
+                        android:textColor="@color/grey" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/loadingProgressbar"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/black"/>
+
+                <TextView
+                    android:id="@+id/noMoreImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/bevietnam_medium"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_25sdp"
+                    android:text="Look like your are unautorized to get more images"/>
+
+            </LinearLayout>
+        </com.domonz.PrashantAdvait.utils.CustomNestedScrollView>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loadingLayout"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/black"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone" />
+
+</FrameLayout>
