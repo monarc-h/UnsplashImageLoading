@@ -13,7 +13,7 @@ Before running the app, ensure you have the following:
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/your-username/image-loading-assignment.git
+   git clone https://github.com/monarc-h/UnsplashImageLoading.git
 
 2. **Open the Project in Android Studio**:  
     • Launch Android Studio.  
