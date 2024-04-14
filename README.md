@@ -23,7 +23,7 @@ Before running the app, ensure you have the following:
 3. **Gradle and DaggerHilt Version**:  
     • Open **File > Project Structure**.  
     • Select "Project".  
-    • Make sure Gradle Plugin Version is **8.2.0** and Gradle Version is **8.2**.
+    • Make sure Gradle Plugin Version is **8.2.0** and Gradle Version is **8.2**.  
     • Open build.gradle.kts (project level) and make sure Dagger Hilt version is **2.48**.  
     • If project is asking for sync then sync it using **Ctrl+Shift+O**.  
 
