@@ -15,10 +15,10 @@ Before running the app, ensure you have the following:
    ```bash
    git clone https://github.com/your-username/image-loading-assignment.git
 
-2. **Open the Project in Android Studio**:
-    • Launch Android Studio.
-    • Select "Open an existing Android Studio project".
-    • Navigate to the directory where you cloned the repository and select it.
+2. **Open the Project in Android Studio**:\n
+    • Launch Android Studio.\n
+    • Select "Open an existing Android Studio project".\n
+    • Navigate to the directory where you cloned the repository and select it.\n
 
 3. **Gradle Version**:
     • Open **File > Project Structure**.
